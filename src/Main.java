@@ -11,10 +11,10 @@ public class Main {
             Predicate<Integer> positive1 = new Predicate<Integer>() {
                 @Override
                 public boolean test(Integer integer) {
-                    return false;
+                    return integer > 0;
                 }
             };
-            System.out.println(positive1.test(-5));
+            System.out.println(positive1.test(5));
         }
         Predicate<Integer> positive2 = x -> (x > 0);
         System.out.println(positive2.test(-1));
